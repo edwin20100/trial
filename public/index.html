@@ -27,6 +27,7 @@
  		<button type="button" id="btnInicializar" onclick="app.cargarMapa();"> Inicializa la ruta </button>
 	 	Usuarios conectados: <div id="divUsuarios"></div>
 </div>
+	
 <div id="fh5co-page">
 	<header id="fh5co-header" role="banner">
 		<div class="container">
@@ -34,8 +35,8 @@
 				<h1><a href="index.html"><image src="img/logo.jpg"></image> A Tiempo </a></h1>
 				<nav role="navigation">
 					<ul>
-						<li><a href="index.html">Horarios</a></li>
-						<li><a href="ubicame.html">Ubicame</a></li>
+						<li><a href="#horarios">Horarios</a></li>
+						<li><a href="#ubicame">Ubicame</a></li>
 						<li><a href="sugerencia.html">Sugerencias</a></li>
 						<li class="cta"><a href="#">Ayuda</a></li>
 					</ul>
@@ -43,10 +44,61 @@
 			</div>
 		</div>
 	</header>
+
+	<div id="fh5co-services-section">
+		<div id="horarios" class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
+					<h2>Nuestros Recorridos</h2>
+					<p></p>
+				</div>
+			</div>
+			<div class="row">
+			<!-- Contenido -->
+			<div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-lg-12">
+                        <table class="table table-hover table-striped table-responsive">
+							<thead>
+								<tr>
+									<th></th>
+									<th width="60%">Salida</th>
+									<th width="35%">Restante</th>
+								</tr>
+							</thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a href="#"><i class="-alt fa fa-2x fa-eye fa-fw"></i></a>
+                                    </td>
+                                    <td>
+                                        <h4>
+                                            <b>8:30 am - 9:45 am.</b>
+                                        </h4>
+                                        <p>A Tiempo</p>
+                                    </td>
+                                    <td>
+                                        <h4>
+                                            <b>4 mins</b>
+                                        </h4>
+                                        
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+			</div>
+		</div>
+	</div>
+
 	
 <!--  <div id="map"></div> -->
 	<div id="fh5co-services-section">
-		<div class="container">
+		<div id="ubicame" class="container">
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
 					<h2>Ahora Estoy</h2>
