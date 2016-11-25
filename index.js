@@ -21,6 +21,19 @@ http.listen(port, function(){
 //trabajando con Socket IO
 var socketCount = 0; //contador de conexiones
 
+/* ---> <---- */
+
+var messages = [{  
+  id: 1,
+  text: "Hola soy un mensaje",
+  author: "Carlos Azaustre"
+}];
+
+app.get('/hello', function(req, res) {  
+  res.status(200).send("Hello World!");
+});
+
+//--->>>>
 
 io.on('connection', function(socket){
 
@@ -28,6 +41,16 @@ io.on('connection', function(socket){
 	//console.log(socket);
     socketCount++;// Socket has connected, increase socket count
 	io.sockets.emit('usuario conectado', socketCount +'Hola');    // Let all sockets know how many are connected
+	// ----->
+	 socket.emit('messages', messages);
+
+	  socket.on('new-message', function(data) {
+	    messages.push(data);
+
+	    io.sockets.emit('messages', messages);
+	  });
+	// ------>
+	
 }); //cierra on connection
 
 /*
