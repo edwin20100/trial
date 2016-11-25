@@ -1,33 +1,15 @@
-
 <!DOCTYPE html>
-<html class="no-js"> <!--<![endif]-->
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>TransUp - A Tiempo</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Localizacipon" />
-	<meta name="keywords" content="free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
-	<meta name="author" content="FreeHTML5.co" />
-
- 
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
-
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
-
-	<link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,700" rel="stylesheet">
-	
-	<!-- Animate.css -->
+<html>
+<head>
+     <!-- esto es para adpatarlo al movil-->
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>GMaps.js &mdash; Geolocalizacion,  Ing Josè Luis Olivares</title>
+  <script type="text/javascript" src="js/zepto.min.js"></script>
+  <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyAmkdXb7-rK-dILoqmCxlFuZW1BcBYykKU"></script>
+  <script type="text/javascript" src="js/gmaps.js"></script>
+  <script src="js/socket.io-1.4.5.js"></script>
+  <script type="text/javascript" src="js/main.js"> </script>
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
 	<link rel="stylesheet" href="css/icomoon.css">
@@ -37,26 +19,19 @@
 	<link rel="stylesheet" href="css/flexslider.css">
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
-
-
- 
+	
  <link rel="stylesheet" type="text/css" href="css/estilos.css" />
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-
-	</head>
-	<body>
-	
-	
-	<div id="fh5co-page">
+</head>
+<body>
+<div style="text-align:center;">
+ 		<button type="button" id="btnInicializar" onclick="app.cargarMapa();"> Inicializa la ruta </button>
+	 	Usuarios conectados: <div id="divUsuarios"></div>
+</div>
+<div id="fh5co-page">
 	<header id="fh5co-header" role="banner">
 		<div class="container">
 			<div class="header-inner">
-				<h1><a href="index.html"><image src="images/logo.jpg"></image> A Tiempo </a></h1>
+				<h1><a href="index.html"><image src="img/logo.jpg"></image> A Tiempo </a></h1>
 				<nav role="navigation">
 					<ul>
 						<li><a href="index.html">Horarios</a></li>
@@ -69,7 +44,7 @@
 		</div>
 	</header>
 	
-
+<!--  <div id="map"></div> -->
 	<div id="fh5co-services-section">
 		<div class="container">
 			<div class="row">
@@ -88,49 +63,7 @@
 			</div>
 		</div>
 	</div>
-
-
-	
-	<footer id="fh5co-footer" role="contentinfo">
-			<div class="col-md-12 fh5co-copyright text-center">
-			<p>&copy; TransUp <span>Designed with <i class="icon-heart"></i> by PowerFul by </span></p>	
-		</div>
-		
-	</footer>
-
-	
-	</div>
-	
-	
-	<!-- jQuery -->
+</div>
+</body>
 	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
-	<!-- Stellar -->
-	<script src="js/jquery.stellar.min.js"></script>
-	
-	<!-- MAIN JS -->
-	<script src="js/main2.js"></script>
-
-	<script type="text/javascript" src="js/zepto.min.js"></script>
-  <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyCnwMGq9X_wbOloVbG3AKtdfGi_kpIanDQ"></script>
-  <script type="text/javascript" src="js/gmaps.js"></script>
-    <script type="text/javascript" src="js/socket.io-1.4.5.js"></script>
-  <script type="text/javascript" src="js/main.js"> </script>
-
-	</body>
 </html>
-
-<script type="text/javascript">
-$(document).ready(function()
-{
-	app.cargarMapa();
-});
-</script>
-
