@@ -10,7 +10,7 @@
   	//$("#btnInicializar").on('click', alert('llamada'));
 
 
-var socket = io.connect('https://test-map.herokuapp.com/'); //Creando conexion con el socket del servidor de heroku,
+var socket = io.connect('https://gmaps20100.herokuapp.com/'); //Creando conexion con el socket del servidor de heroku,
                                                           //donde vive nuestra aplicacion  
 
 
