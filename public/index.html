@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <!-- esto es para adpatarlo al movil-->
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>GMaps.js &mdash; Geolocalizacion,  Ing Josè Luis Olivares</title>
+  <script type="text/javascript" src="js/zepto.min.js"></script>
+  <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyAmkdXb7-rK-dILoqmCxlFuZW1BcBYykKU"></script>
+  <script type="text/javascript" src="js/gmaps.js"></script>
+  <script src="js/socket.io-1.4.5.js"></script>
+  <script type="text/javascript" src="js/main.js"> </script>
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+	
+ <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+</head>
+<body>
+<div style="text-align:center;">
+ 		<button type="button" id="btnInicializar" onclick="app.cargarMapa();"> Inicializa la ruta </button>
+	 	Usuarios conectados: <div id="divUsuarios"></div>
+</div>
+<div id="fh5co-page">
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<div class="header-inner">
+				<h1><a href="index.html"><image src="img/logo.jpg"></image> A Tiempo </a></h1>
+				<nav role="navigation">
+					<ul>
+						<li><a href="index.html">Horarios</a></li>
+						<li><a href="ubicame.html">Ubicame</a></li>
+						<li><a href="sugerencia.html">Sugerencias</a></li>
+						<li class="cta"><a href="#">Ayuda</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	
+<!--  <div id="map"></div> -->
+	<div id="fh5co-services-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
+					<h2>Ahora Estoy</h2>
+					<p>Seguimiento UNIVO </p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 animate-box">
+					<div class="services" id="map">
+						
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+	<script src="js/jquery.min.js"></script>
+</html>
