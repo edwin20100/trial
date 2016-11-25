@@ -73,9 +73,10 @@
       }
 
       function inicializar(){
-        localStorage.string_array_puntos = '[]';
-        array_puntos = JSON.parse(localStorage.string_array_puntos);
-        geolocalizar();  
+      //  localStorage.string_array_puntos = '[]';
+      //  array_puntos = JSON.parse(localStorage.string_array_puntos);
+      //  geolocalizar();  
+        alert("---inicializar");
       }
       
       $("#inicializar").on('click', inicializar);
