@@ -41,12 +41,8 @@ socket.on('messages', function(data) {
 			context  = "label label-danger"
 			break;
 	}
-	var elem =  document.getElementById(data.index);
-	var sonNode;
-	 for(i = 0; i < elem.childNodes.length; i++){
-		sonNode = elem.childNodes[i];
-		 console.log(sonNode.id);
-	    }
+	var elem =  $("#"+data.index);
+	elem.html="JOLALAL";
 	//element.getElementById('status-item').innerHTML = html;
 	//document.getElementById('status-item').innerHTML = html;
 	//document.getElementById('status-item').className= context;
