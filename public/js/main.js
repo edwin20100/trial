@@ -46,7 +46,7 @@ socket.on('messages', function(data) {
 	console.log(data.id);
 	console.log(elem);
 	console.log(elem.find("#statusItem").html());
-	elem.find("#statusItem").html = context;
+	elem.find("#statusItem").attr("class",context);
 	
 	//element.getElementById('status-item').innerHTML = html;
 	//document.getElementById('status-item').innerHTML = html;
