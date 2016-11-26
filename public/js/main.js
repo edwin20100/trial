@@ -134,10 +134,14 @@ var app={
       },
 
       listenSocket:function(){ //funcion para comunicarnos con Socketio
-          socket.on('usuario conectado', function(data){
+      /*    socket.on('usuario conectado', function(data){
             $('#divUsuarios').html(data); //displaying how many conncetions are.
-          });  
-
+          });  */
+	     socket.on('horarios',function(data){
+		     console.log(data);
+	     });
+	
+	  
       },
 
     inicializar: function() {
