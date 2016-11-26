@@ -23,8 +23,8 @@ socket.on('messages', function(data) {
 function render (data) {  
   var html = data.map(function(elem, index) {
     return(`<div>
-              <strong>${elem.author}</strong>:
-              <em>${elem.text}</em>
+              <strong>${elem.posicionX}</strong>:
+              <em>${elem.posicionY}</em>
             </div>`);
   }).join(" ");
 
@@ -33,8 +33,8 @@ function render (data) {
 
 function addMessage(e) {  
   var message = {
-    author: document.getElementById('username').value,
-    text: document.getElementById('texto').value
+    posicionX: document.getElementById('username').value,
+    posicionY: document.getElementById('texto').value
   };
 
   socket.emit('new-message', message);
