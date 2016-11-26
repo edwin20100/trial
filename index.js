@@ -42,13 +42,13 @@ io.on('connection', function(socket){
     socketCount++;// Socket has connected, increase socket count
 	io.sockets.emit('usuario conectado', socketCount +'Hola');    // Let all sockets know how many are connected
 	// ----->
-	 socket.emit('messages', messages);
+	 //socket.emit('messages', messages);
 
-	/*  socket.on('new-message', function(data) {
+	 socket.on('new-message', function(data) {
 	    messages.push(data);
 
 	    io.sockets.emit('messages', messages);
-	  });*/
+	  });
 	// ------>
 	
 }); //cierra on connection
