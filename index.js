@@ -29,10 +29,10 @@ var messages = [{
   posicionY: "Carlos Azaustre"
 }];
 
-var horarios =[{horaSalida: "6.45",horaLlegada: "7.05",periodo:"a.m.",tiempoRestante: "0 mins", estado:"Detenedio" },
-	      {horaSalida: "7.20",horaLlegada: "7.50",periodo:"a.m.",tiempoRestante: "0 mins", estado:"Detenedio" },
-	      {horaSalida: "8.50",horaLlegada: "9.10",periodo:"a.m.",tiempoRestante: "0 mins", estado:"Detenedio" },
-	      {horaSalida: "10.30",horaLlegada: "10.50",periodo:"a.m.",tiempoRestante: "0 mins", estado:"Detenedio" }];
+var horarios =[{item: "item-1", horaSalida: "6.45",horaLlegada: "7.05",periodo:"a.m.",tiempoRestante: "0 mins", estado:"Detenedio" },
+	      { item: "item-2", horaSalida: "7.20",horaLlegada: "7.50",periodo:"a.m.",tiempoRestante: "0 mins", estado:"Detenedio" },
+	      {item: "item-2", horaSalida: "8.50",horaLlegada: "9.10",periodo:"a.m.",tiempoRestante: "0 mins", estado:"Detenedio" },
+	      {item: "item-2",horaSalida: "10.30",horaLlegada: "10.50",periodo:"a.m.",tiempoRestante: "0 mins", estado:"Detenedio" }];
 
 app.get('/hello', function(req, res) {  
   res.status(200).send("Hello World!");
