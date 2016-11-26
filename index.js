@@ -46,6 +46,7 @@ io.on('connection', function(socket){
 
 	 socket.on('new-message', function(data) {
 	    messages.push(data);
+ 	    alert(data.posicionX);
 	    //messages = data;
 	    io.sockets.emit('messages', messages);
 	  });
