@@ -21,6 +21,7 @@ socket.on('messages', function(data) {
 //var html =  data.posicionX + " ->" + data.posicionY + data.accion;
 	var html =  data.accion;
 document.getElementById('status-item').innerHTML = html;
+	document.getElementById('status-item').className="label label-Danger";
 })
 
 function render (data) {  
