@@ -41,8 +41,13 @@ socket.on('messages', function(data) {
 			context  = "label label-danger"
 			break;
 	}
-document.getElementById('status-item').innerHTML = html;
-	document.getElementById('status-item').className= context;
+	var element =  document.getElementById(data.index);
+	var status = element.childNodes.statusItem;
+	status.innerHTML = html;
+	status.className=context;
+	//element.getElementById('status-item').innerHTML = html;
+	//document.getElementById('status-item').innerHTML = html;
+	//document.getElementById('status-item').className= context;
 })
 
 function render (data) {  
@@ -77,11 +82,11 @@ function tableCreate(data)
 			context = "label label-danger"
 			break;
 		}
-   		 return(`<tr id="${index}">
+   		 return(`<tr id="item-${index}">
 				<td><a href="#"><i class="-alt fa fa-2x fa-eye fa-fw"></i></a></td>	
 				<td>
 					<h4><b>${elem.horaSalida} ${elem.periodo} - ${elem.horaLlegada} ${elem.periodo}</b></h4>
-					<span class="${context}" id="status-item">${elem.estado}</span> 
+					<span class="${context}" id="statusItem">${elem.estado}</span> 
 				</td>
 				<td>
 					<h4><b>${elem.tiempoRestante} </b></h4>
@@ -121,7 +126,8 @@ function addMessage(e) {
 
 function addAction(e,p_action) {  
   var message = {
-	  accion : p_action//,
+	  accion : p_action,
+	  index:e,
   //  posicionX: document.getElementById('username').value,
    // posicionY: document.getElementById('texto').value
   };
