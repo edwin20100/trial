@@ -61,15 +61,16 @@
 	<div id="fh5co-services-section">
 		<div id="horarios" class="container">
 			<div class="row">
-				<div class="col-md-3 col-md-offset-3 text-center fh5co-heading animate-box">
-					<h2>Enviar alerta</h2>
-					 <div class="list-group">
-						 <button type="button" class="list-group-item list-group-item-action active"></button>
-						 <button type="button" onclick="return addAction(this,1)" class="list-group-item list-group-item-action">Por Salir</button>
-						 <button type="button" onclick="return addAction(this,2)" class="list-group-item list-group-item-action">En Marcha</button>
-						 <button type="button" onclick="return addAction(this,3)" class="list-group-item list-group-item-action">Por Llegar</button>
-						 <button type="button" class="list-group-item list-group-item-action disabled"></button>
-					</div>
+				 <div class="col-md-12 col-sm-12 col-lg-12">
+				<table class="table table-hover table-striped table-responsive">
+				<thead>
+					<tr>
+					<th></th>
+					<th width="60%">Salida</th>
+					<th width="35%">Restante</th>
+					</tr>
+				</thead>
+				<tbody id="body-table">
 					<div class="row">
 						<div class="col-xs-12">
 						    <ul class="nav nav-pills nav-justified thumbnail">
@@ -88,9 +89,8 @@
 						    </ul>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-3 col-md-offset-3 text-center fh5co-heading animate-box">
-					<table><tbody id="body-table"></tbody></table>
+				</tbody>
+			        </table>
 				</div>
 			</div>
         	</div>
