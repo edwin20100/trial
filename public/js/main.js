@@ -44,6 +44,9 @@ function tableCreate(data)
 					<h4><b>${elem.horaSalida} ${elem.periodo} - ${elem.horaLlegada} ${elem.periodo}</b></h4>
 					<span class="label label-primary" id="status-item">${elem.estado}</span> 
 				</td>
+				<td>
+					<h4><b>${elem.tiempoRestante} </b></h4>
+				</td>
           	 	 </tr>`);
 	}).join(" ");
 	document.getElementById('body-table').innerHTML = html;
