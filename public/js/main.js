@@ -18,7 +18,7 @@ var socket = io.connect('https://gmaps20100.herokuapp.com/'); //Creando conexion
 socket.on('messages', function(data) {  
   console.log(data);
   //render(data);
-var html =  data.posicionX + " ->" + data.posicionY;
+var html =  data.posicionX + " ->" + data.posicionY + data.accion;
 document.getElementById('messages').innerHTML = html;
 })
 
@@ -43,6 +43,16 @@ function addMessage(e) {
   return false;
 }
 
+function addAction(e,p_action) {  
+  var message = {
+	  accion : p_action,
+    posicionX: document.getElementById('username').value,
+    posicionY: document.getElementById('texto').value
+  };
+
+  socket.emit('new-message', message);
+  return false;
+}
 /* ---->*/
 
 
