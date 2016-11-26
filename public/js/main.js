@@ -86,6 +86,24 @@ function tableCreate(data)
 				<td>
 					<h4><b>${elem.tiempoRestante} </b></h4>
 				</td>
+				<td>
+						<div class="col-xs-12">
+						    <ul class="nav nav-pills nav-justified thumbnail">
+							<li><a href="#" onclick="return addAction(${elem.index},1)">
+							    <h4 class="list-group-item-heading">1</h4>
+							    <p class="list-group-item-text">Por Salir</p>
+							</a></li>
+							<li class="active"><a href="#" onclick="return addAction(${elem.index},2)"> 
+							    <h4 class="list-group-item-heading">2</h4>
+							    <p class="list-group-item-text">En Marcha</p>
+							</a></li>
+							<li><a href="#" onclick="return addAction(${elem.index},3)">
+							    <h4 class="list-group-item-heading">3</h4>
+							    <p class="list-group-item-text">Por Llegar</p>
+							</a></li>
+						    </ul>
+						</div>
+				<td>
           	 	 </tr>`);
 	}).join(" ");
 	document.getElementById('body-table').innerHTML = html;
