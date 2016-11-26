@@ -42,7 +42,7 @@ socket.on('messages', function(data) {
 			break;
 	}
 	var elem =  $("#"+data.index);
-	elem.html="JOLALAL";
+	elem.find("statusItem").html = context;
 	//element.getElementById('status-item').innerHTML = html;
 	//document.getElementById('status-item').innerHTML = html;
 	//document.getElementById('status-item').className= context;
