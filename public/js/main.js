@@ -36,7 +36,7 @@ socket.on('messages', function(data) {
 			html  = "Por Llegar";
 			context = "label label-info"
 			break;
-		default;
+		default:
 			html = "Detenido";
 			context  = "label label-danger"
 			break;
