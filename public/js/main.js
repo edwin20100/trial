@@ -94,15 +94,15 @@ function tableCreate(data)
 				<td>
 						<div class="col-xs-12">
 						    <ul class="nav nav-pills nav-justified thumbnail">
-							<li><a href="#" onclick="return addAction(${elem.index},1)">
+							<li><a href="#" onclick="return addAction(item-${index},1)">
 							    <h4 class="list-group-item-heading">1</h4>
 							    <p class="list-group-item-text">Por Salir</p>
 							</a></li>
-							<li class="active"><a href="#" onclick="return addAction(${elem.index},2)"> 
+							<li class="active"><a href="#" onclick="return addAction(item-${index},2)"> 
 							    <h4 class="list-group-item-heading">2</h4>
 							    <p class="list-group-item-text">En Marcha</p>
 							</a></li>
-							<li><a href="#" onclick="return addAction(${elem.index},3)">
+							<li><a href="#" onclick="return addAction(item-${index},3)">
 							    <h4 class="list-group-item-heading">3</h4>
 							    <p class="list-group-item-text">Por Llegar</p>
 							</a></li>
