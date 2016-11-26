@@ -20,8 +20,29 @@ socket.on('messages', function(data) {
   //render(data);
 //var html =  data.posicionX + " ->" + data.posicionY + data.accion;
 	var html =  data.accion;
+	var mensaje = "";
+	var context = "";
+	switch(html)
+	{
+		case 1: //por llegar
+			html =  "Por Salir";
+			context = "label label-warning"
+			break;
+		case 2:
+			html =  "En marcha";
+			context = "label label-success"
+			break;
+		case 3:
+			html  = "Por Llegar";
+			context = "label label-info"
+			break;
+		default;
+			html = "Detenido";
+			context  = "label label-danger"
+			break;
+	}
 document.getElementById('status-item').innerHTML = html;
-	document.getElementById('status-item').className="label label-danger";
+	document.getElementById('status-item').className= context;
 })
 
 function render (data) {  
