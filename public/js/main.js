@@ -42,9 +42,11 @@ socket.on('messages', function(data) {
 			break;
 	}
 	var elem =  document.getElementById(data.index);
-	var status = elem.childNodes.item["statusItem"];
-	status.innerHTML = html;
-	status.className=context;
+	var sonNode;
+	 for(i = 0; i < elem.childNodes.length; i++){
+		sonNode = elem.childNodes[i];
+		 console.log(sonNode.id);
+	    }
 	//element.getElementById('status-item').innerHTML = html;
 	//document.getElementById('status-item').innerHTML = html;
 	//document.getElementById('status-item').className= context;
