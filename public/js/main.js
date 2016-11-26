@@ -77,7 +77,7 @@ function tableCreate(data)
 			context = "label label-danger"
 			break;
 		}
-   		 return(`<tr id="${elem.index}">
+   		 return(`<tr id="${index}">
 				<td><a href="#"><i class="-alt fa fa-2x fa-eye fa-fw"></i></a></td>	
 				<td>
 					<h4><b>${elem.horaSalida} ${elem.periodo} - ${elem.horaLlegada} ${elem.periodo}</b></h4>
