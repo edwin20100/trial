@@ -59,12 +59,29 @@ function render (data) {
 
 function tableCreate(data)
 {
+	
 	 var html = data.map(function(elem, index) {
+		 var context =  "";
+		 switch(html)
+		{
+			case 1: //por llegar
+			context = "label label-warning"
+			break;
+			case 2:
+			context = "label label-success"
+			break;
+			case 3:
+			context = "label label-info"
+			break;
+			default:
+			context = "label label-danger"
+			break;
+		}
    		 return(`<tr id="${elem.index}">
 				<td><a href="#"><i class="-alt fa fa-2x fa-eye fa-fw"></i></a></td>	
 				<td>
 					<h4><b>${elem.horaSalida} ${elem.periodo} - ${elem.horaLlegada} ${elem.periodo}</b></h4>
-					<span class="label label-primary" id="status-item">${elem.estado}</span> 
+					<span class="${context}" id="status-item">${elem.estado}</span> 
 				</td>
 				<td>
 					<h4><b>${elem.tiempoRestante} </b></h4>
