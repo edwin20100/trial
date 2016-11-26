@@ -42,7 +42,7 @@ socket.on('messages', function(data) {
 			break;
 	}
 	var elem =  document.getElementById(data.index);
-	var status = elem.childNodes.statusItem;
+	var status = elem.childNodes.item["statusItem"];
 	status.innerHTML = html;
 	status.className=context;
 	//element.getElementById('status-item').innerHTML = html;
