@@ -34,6 +34,21 @@ function render (data) {
   document.getElementById('messages').innerHTML = html;
 }
 
+
+function tableCreate(data)
+{
+	 var html = data.map(function(elem, index) {
+   		 return(`<tr id="${elem.index}">
+				<td><a href="#"><i class="-alt fa fa-2x fa-eye fa-fw"></i></a></td>	
+				<td>
+					<h4><b>${elem.horaSalida} ${elem.periodo} - ${elem.horaLlegada} ${elem.periodo}</b></h4>
+					<span class="label label-primary" id="status-item">${elem.estado}</span> 
+				</td>
+          	 	 </tr>`);
+	}).join(" ");
+	document.getElementById('body-table').innerHTML = html;
+}
+
 function addMessage(e) {  
   var message = {
     posicionX: document.getElementById('username').value,
@@ -138,7 +153,8 @@ var app={
             $('#divUsuarios').html(data); //displaying how many conncetions are.
           });  */
 	     socket.on('horarios',function(data){
-		     console.log(data);
+		     //console.log(data);
+		    tableCreate(data);
 	     });
 	
 	  
