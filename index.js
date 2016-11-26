@@ -24,9 +24,9 @@ var socketCount = 0; //contador de conexiones
 /* ---> <---- */
 
 var messages = [{  
-  id: 1,
-  text: "Hola soy un mensaje",
-  author: "Carlos Azaustre"
+  acccion: 1,
+  posicionX: "Hola soy un mensaje",
+  posicionY: "Carlos Azaustre"
 }];
 
 app.get('/hello', function(req, res) {  
@@ -45,7 +45,7 @@ io.on('connection', function(socket){
 	 //socket.emit('messages', messages);
 
 	 socket.on('new-message', function(data) {
-	    messages.push(data);
+	    //messages.push(data);
 
 	    io.sockets.emit('messages', messages);
 	  });
