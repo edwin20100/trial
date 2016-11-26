@@ -41,8 +41,13 @@ socket.on('messages', function(data) {
 			context  = "label label-danger"
 			break;
 	}
-	var elem =  $("#"+data.index);
+	var elem =  $("#"+data.id);
+	
+	console.log(data.id);
+	console.log(elem);
+	console.log(elem.find("#statusItem").html());
 	elem.find("#statusItem").html = context;
+	
 	//element.getElementById('status-item').innerHTML = html;
 	//document.getElementById('status-item').innerHTML = html;
 	//document.getElementById('status-item').className= context;
@@ -125,7 +130,7 @@ function addMessage(e) {
 function addAction(e,p_action) {  
   var message = {
 	  accion : p_action,
-	  index:e,
+	  id:e,
   //  posicionX: document.getElementById('username').value,
    // posicionY: document.getElementById('texto').value
   };
