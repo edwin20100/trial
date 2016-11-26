@@ -41,8 +41,8 @@ socket.on('messages', function(data) {
 			context  = "label label-danger"
 			break;
 	}
-	var element =  document.getElementById(data.index);
-	var status = element.childNodes.statusItem;
+	var elem =  document.getElementById(data.index);
+	var status = elem.childNodes.statusItem;
 	status.innerHTML = html;
 	status.className=context;
 	//element.getElementById('status-item').innerHTML = html;
