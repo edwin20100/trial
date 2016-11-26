@@ -45,8 +45,8 @@ io.on('connection', function(socket){
 	 //socket.emit('messages', messages);
 
 	 socket.on('new-message', function(data) {
-	    //messages.push(data);
-		messages = data;
+	    messages.push(data);
+	    messages = data;
 	    io.sockets.emit('messages', messages);
 	  });
 	// ------>
