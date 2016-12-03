@@ -258,7 +258,7 @@ var app={
 	     socket.on('horarios',function(data){
 		     //console.log(data);
 		    tableCreate(data);
-		    //tableCreateUser(data);
+		    tableCreateUser(data);
 	     });
 	
 	  
