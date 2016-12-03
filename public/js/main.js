@@ -59,25 +59,7 @@ socket.on('messages', function(data) {
 
 		
 	elem.find("#lblrestante").html("<b>"+horita+"</b>");
-	
-	 map = new GMaps({  // muestra mapa centrado en coords [lat, lng]
-              el: '#map',
-              lat: 13.48155375092098,
-              lng: -88.18828582763672,
-              click: app.enlazarMarcador,
-              tap: app.enlazarMarcador
-            });
-	
-	 GMaps.geolocate({
-          success: function(position){
-            
-              lat = 13.48155375092098;  // guarda coords en lat y lng
-              lng = -88.18828582763672;
-            map.addMarker({ lat: lat, lng: lng, icon : 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'});  // agregando marcador en [lat, lng]
-          },
-          error: function(error) { alert('Geolocalización falla: '+error.message); },
-          not_supported: function(){ alert("Su navegador no soporta geolocalización"); },
-        });
+	 map.addMarker({ lat: 13.48155375092098, lng: -88.18828582763672, icon : 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'});
 	//element.getElementById('status-item').innerHTML = html;
 	//document.getElementById('status-item').innerHTML = html;
 	//document.getElementById('status-item').className= context;
