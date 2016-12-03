@@ -142,36 +142,7 @@ function addAction(e,p_action) {
 
 
 var app={
-      geolocalizar:function (){
-        GMaps.geolocate({
-          success: function(position){
-            if(!array_puntos[0]) {
-              lat = position.coords.latitude;  // guarda coords en lat y lng
-              lng = position.coords.longitude;
-            }else{
-              lat = array_puntos[array_puntos.length-1][0] || position.coords.latitude;  // guarda coords en lat y lng
-              lng = array_puntos[array_puntos.length-1][1] || position.coords.longitude;
-            }
-            
-            array_puntos.push([lat,lng]); //insertando las nuevas geo posiciones
-
-            map = new GMaps({  // muestra mapa centrado en coords [lat, lng]
-              el: '#map',
-              lat: lat,
-              lng: lng,
-              click: app.enlazarMarcador,
-              tap: app.enlazarMarcador
-            });
-
-            app.pinta_rutas(); //dibujando rutas
-            
-            map.addMarker({ lat: lat, lng: lng});  // agregando marcador en [lat, lng]
-          },
-          error: function(error) { alert('Geolocalización falla: '+error.message); },
-          not_supported: function(){ alert("Su navegador no soporta geolocalización"); },
-        });
-      },
-
+     
 	enlazarMarcador: function (e){
        // muestra ruta entre marcas anteriores y actuales
         map.drawRoute({
@@ -210,17 +181,8 @@ var app={
         }
       },
 
-      cargarMapa:function(){
-		//alert('llama pinta_rutas');
-		localStorage.string_array_puntos = '[]';
-        array_puntos = JSON.parse(localStorage.string_array_puntos);
-        app.geolocalizar();
-      },
 
       listenSocket:function(){ //funcion para comunicarnos con Socketio
-      /*    socket.on('usuario conectado', function(data){
-            $('#divUsuarios').html(data); //displaying how many conncetions are.
-          });  */
 	     socket.on('horarios',function(data){
 		     
 		     var dato =  data;
@@ -235,7 +197,6 @@ var app={
 		"use strict";
 		var self=this;
 		self.listenSocket(); //Conectando al server con SocketIo
-        self.cargarMapa(); //llamando metodo que carga el mapa
 	}
 
 }; //cierra var app
