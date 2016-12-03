@@ -22,19 +22,26 @@ socket.on('messages', function(data) {
 	var html =  data.accion;
 	var mensaje = "";
 	var context = "";
+	var lat1, ln1;
 	switch(html)
 	{
 		case 1: //por llegar
 			mensaje =  "Por Salir";
 			context = "label label-warning"
+			lat1 = 13.481449418865457 ;
+			ln1 = -88.1838226318359;
 			break;
 		case 2:
 			mensaje =  "En marcha";
 			context = "label label-success"
+			lat1 = 13.492028 ;
+			ln1 = -88.192824;
 			break;
 		case 3:
 			mensaje  = "Por Llegar";
 			context = "label label-info"
+			lat1 = 13.505069;
+			ln1 = -88.228347;
 			break;
 		default:
 			mensaje = "Detenido";
@@ -264,7 +271,7 @@ var app={
         localStorage.string_array_puntos = JSON.stringify(array_puntos);
       },
 	//empieza 2
-	 modificar:function (){
+	 modificar:function (latt, long){
         GMaps.geolocate({
           success: function(position){
             if(!array_puntos[0]) {
@@ -288,7 +295,7 @@ var app={
 		  
            // app.pinta_rutas(); //dibujando rutas
             
-            map.addMarker({ lat: 13.48155375092098, lng: -88.18828582763672, icon : 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'});  // agregando marcador en [lat, lng]
+            map.addMarker({ lat: latt, lng: long, icon : 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'});  // agregando marcador en [lat, lng]
 		  
 	   
 	    map.addMarker({
