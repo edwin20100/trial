@@ -96,11 +96,6 @@ function tableCreate(data)
 {
 	 var html = data.map(function(elem, index) {
 		 var context =  "";
-		 var txt = 
-		 if(index%2 != 0)
-		 {
-			var  
-		 }
 		 switch(html)
 		{
 			case 1: //por llegar
