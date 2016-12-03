@@ -405,12 +405,17 @@ var app={
       /*    socket.on('usuario conectado', function(data){
             $('#divUsuarios').html(data); //displaying how many conncetions are.
           });  */
-	     socket.on('horarios',function(data){
+	      var doc =  document.getElementById("txtAdmin");
+	      if(doc != null)
+	      {
+		  socket.on('horarios',function(data){
 		     
 		     var dato =  data;
 		     //console.log(data);
 		    tableCreate(dato);
-	     });
+	    	 });
+	      }
+	     
 	
 	  
       },
