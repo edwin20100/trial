@@ -64,74 +64,48 @@ function render (data) {
   document.getElementById('messages').innerHTML = html;
 }
 
-function tableCreateUser(data)
-{
-	
-	 var html = data.map(function(elem, index) {
-		 var context =  "";
-		 switch(html)
-		{
-			case 1: //por llegar
-			context = "label label-warning"
-			break;
-			case 2:
-			context = "label label-success"
-			break;
-			case 3:
-			context = "label label-info"
-			break;
-			default:
-			context = "label label-danger"
-			break;
-		}
-   		 return(`<tr id="item-${index}">
-				<td><a href="#"><i class="-alt fa fa-2x fa-eye fa-fw"></i></a></td>	
-				<td>
-					<h4><b>${elem.horaSalida} ${elem.periodo} - ${elem.horaLlegada} ${elem.periodo}</b></h4>
-					<span class="${context}" id="statusItem">${elem.estado}</span> 
-				</td>
-				<td>
-					<h4><b>${elem.tiempoRestante} </b></h4>
-				</td>
-				
-          	 	 </tr>`);
-	}).join(" ");
-	document.getElementById('body-table-user').innerHTML = html;
-}
+
 
 function tableCreate(data)
 {
-	var values = data;
-	var html = values.map(function(elem, index) {
-		 var context =  "";
-		 switch(html)
-		{
-			case 1: //por llegar
-			context = "label label-warning"
-			break;
-			case 2:
-			context = "label label-success"
-			break;
-			case 3:
-			context = "label label-info"
-			break;
-			default:
-			context = "label label-danger"
-			break;
-		}
-   		 return(`<tr id="item-${index}">
-				<td><a href="#"><i class="-alt fa fa-2x fa-eye fa-fw"></i></a></td>	
-				<td>
-					<h4><b>${elem.horaSalida} ${elem.periodo} - ${elem.horaLlegada} ${elem.periodo}</b></h4>
-					<span class="${context}" id="statusItem">${elem.estado}</span> 
-				</td>
-				<td>
-					<h4><b>${elem.tiempoRestante} </b></h4>
-				</td>
-				
-          	 	 </tr>`);
-	}).join(" ");
-	document.getElementById('body-table-user').innerHTML = html;
+	var user = document.getElementById('body-table-user'); //Tabla usuario
+	if(user ===undefine)
+	{
+	}
+	else
+	{
+		var values = data;
+		var html = values.map(function(elem, index) {
+			 var context =  "";
+			 switch(html)
+			{
+				case 1: //por llegar
+				context = "label label-warning"
+				break;
+				case 2:
+				context = "label label-success"
+				break;
+				case 3:
+				context = "label label-info"
+				break;
+				default:
+				context = "label label-danger"
+				break;
+			}
+			 return(`<tr id="item-${index}">
+					<td><a href="#"><i class="-alt fa fa-2x fa-eye fa-fw"></i></a></td>	
+					<td>
+						<h4><b>${elem.horaSalida} ${elem.periodo} - ${elem.horaLlegada} ${elem.periodo}</b></h4>
+						<span class="${context}" id="statusItem">${elem.estado}</span> 
+					</td>
+					<td>
+						<h4><b>${elem.tiempoRestante} </b></h4>
+					</td>
+
+				 </tr>`);
+		}).join(" ");
+		document.getElementById('body-table-user').innerHTML = html;
+	}
 	
 	 var html = data.map(function(elem, index) {
 		 var context =  "";
