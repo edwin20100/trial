@@ -24,8 +24,10 @@ socket.on('messages', function(data) {
 	var context = "";
 	var lat1, ln1;
 	console.log("------>" + data.pos);
-	switch(html)
+	if(data.pos % 2 == 0)
 	{
+		switch(html)
+		{
 		case 1: //por llegar
 			mensaje =  "Por Salir";
 			context = "label label-warning"
@@ -54,6 +56,39 @@ socket.on('messages', function(data) {
 			mensaje = "Detenido";
 			context  = "label label-danger"
 			break;
+		}
+	}else{
+		switch(html)
+		{
+		case 4: //por llegar
+			mensaje =  "Por Salir";
+			context = "label label-warning"
+			lat1 = 13.481449418865457 ;
+			ln1 = -88.1838226318359;
+			break;
+		case 3:
+			mensaje =  "En marcha";
+			context = "label label-success"
+			lat1 = 13.492028 ;
+			ln1 = -88.192824;
+			break;
+		case 2:
+			mensaje  = "Por Llegar";
+			context = "label label-info"
+			lat1 = 13.505069;
+			ln1 = -88.228347;
+			break;
+		case 1:
+			mensaje  = "Reccorrido Terminado";
+			context = "label label-success"
+			lat1 = 13.508615946907991;
+			ln1 = -88.23268175125122;
+			break;
+		default:
+			mensaje = "Detenido";
+			context  = "label label-danger"
+			break;
+		}
 	}
 	var elem =  $("#"+data.id);
 	
