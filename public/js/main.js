@@ -48,7 +48,10 @@ socket.on('messages', function(data) {
 	console.log(elem.find("#statusItem").html());
 	elem.find("#statusItem").attr("class",context);
 	var d = new Date();
-	elem.find("#lblrestante").html("<b>"+d.getHours()+"</b>");
+	var hora = d.getHours()+':'+d.getMinutes()+':'+d.getSeconds();
+
+
+	elem.find("#lblrestante").html("<b>"+hora+"</b>");
 	app.geolocalizar();
 	//element.getElementById('status-item').innerHTML = html;
 	//document.getElementById('status-item').innerHTML = html;
