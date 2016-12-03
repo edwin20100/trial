@@ -263,7 +263,56 @@ var app={
         array_puntos.push([lat,lng]);
         localStorage.string_array_puntos = JSON.stringify(array_puntos);
       },
+	//empieza 2
+	 modificar:function (){
+        GMaps.geolocate({
+          success: function(position){
+            if(!array_puntos[0]) {
+              lat = position.coords.latitude;  // guarda coords en lat y lng
+              lng = position.coords.longitude;
+            }else{
+              lat = array_puntos[array_puntos.length-1][0] || position.coords.latitude;  // guarda coords en lat y lng
+              lng = array_puntos[array_puntos.length-1][1] || position.coords.longitude;
+            }
+            
+            array_puntos.push([lat,lng]); //insertando las nuevas geo posiciones
 
+            map = new GMaps({  // muestra mapa centrado en coords [lat, lng]
+              el: '#map',
+              lat: lat,
+              lng: lng,
+              click: app.enlazarMarcador,
+              tap: app.enlazarMarcador
+            });
+		
+		  
+           // app.pinta_rutas(); //dibujando rutas
+            
+            map.addMarker({ lat: 13.48155375092098, lng: -88.18828582763672, icon : 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'});  // agregando marcador en [lat, lng]
+		  
+	   
+	    map.addMarker({
+		  lat: 13.481449418865457,
+		  lng: -88.1838226318359,
+		  title: 'Universidad de Oriente',
+		  click: function(e) {
+		    alert('You clicked in this marker');
+		  }
+		});
+	     map.addMarker({
+		  lat: 13.509367051216666,
+		  lng: -88.23191463947296,
+		  title: 'Universidad de Oriente',
+		  click: function(e) {
+		    alert('You clicked in this marker');
+		  }
+		});
+		  app.pinta_rutas();
+          },
+          error: function(error) { alert('Geolocalización falla: '+error.message); },
+          not_supported: function(){ alert("Su navegador no soporta geolocalización"); },
+        });
+      }, //TErmina 2
 
       pinta_rutas:function (){ //se carga al inicio, para las primeras coordenadas
       	/*	
