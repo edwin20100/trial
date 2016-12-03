@@ -43,6 +43,12 @@ socket.on('messages', function(data) {
 			lat1 = 13.505069;
 			ln1 = -88.228347;
 			break;
+		case 4:
+			mensaje  = "Reccorrido Terminado";
+			context = "label label-success"
+			lat1 = 13.508615946907991;
+			ln1 = -88.23268175125122;
+			break;
 		default:
 			mensaje = "Detenido";
 			context  = "label label-danger"
@@ -127,6 +133,10 @@ function tableCreate(data)
 							<li><a href="#" onclick="return addAction('item-${index}',3)">
 							    <h4 class="list-group-item-heading">3</h4>
 							    <p class="list-group-item-text">Por Llegar</p>
+							</a></li>
+							<li><a href="#" onclick="return addAction('item-${index}',4)">
+							    <h4 class="list-group-item-heading">3</h4>
+							    <p class="list-group-item-text">Terminado</p>
 							</a></li>
 						    </ul>
 						</div>
