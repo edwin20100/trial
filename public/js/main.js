@@ -69,7 +69,7 @@ function render (data) {
 function tableCreate(data)
 {
 	var user = document.getElementById('body-table-user'); //Tabla usuario
-	if(user ===undefine)
+	if(user ===undefined)
 	{
 	}
 	else
