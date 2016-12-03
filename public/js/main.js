@@ -209,20 +209,6 @@ var app={
           error: function(error) { alert('Geolocalización falla: '+error.message); },
           not_supported: function(){ alert("Su navegador no soporta geolocalización"); },
         });
-	  var place = new google.maps.LatLng(13.481449418865457,-88.18382263183594);
-		var marker = new google.maps.Marker({
-			position: place
-			, title: 'Universidad de Oriente'
-			, map: map
-			, });
-		//marcador en el centro del mapa
-	       var place2 = new google.maps.LatLng(13.509367051216666,-88.23191463947296);
-		var marker2 = new google.maps.Marker({
-			position: map.getCenter()
-			, title: 'Campus Jaguar de Piedra'
-			, map: map
-			, });    
-	 
       },
 
 	enlazarMarcador: function (e){
@@ -288,7 +274,29 @@ var app={
 		"use strict";
 		var self=this;
 		self.listenSocket(); //Conectando al server con SocketIo
-        self.cargarMapa(); //llamando metodo que carga el mapa
+        self.cargarMapa(); //llamando metodo que carga el 
+	 /*    var place = new google.maps.LatLng(13.481449418865457,-88.18382263183594);
+		var marker = new google.maps.Marker({
+			position: place
+			, title: 'Universidad de Oriente'
+			, map: map
+			, });
+		//marcador en el centro del mapa
+	       var place2 = new google.maps.LatLng(13.509367051216666,-88.23191463947296);
+		var marker2 = new google.maps.Marker({
+			position: map.getCenter()
+			, title: 'Campus Jaguar de Piedra'
+			, map: map
+			, }); 
+	    */
+		map.addMarker({
+			  lat: 13.481449418865457,
+			  lng: -88.18382263183594,
+			  title: 'Universidad de Oriente',
+			  click: function(e) {
+			    alert('You clicked in this marker');
+			  }
+			});
 	}
 
 }; //cierra var app
