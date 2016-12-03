@@ -205,7 +205,7 @@ var app={
 		  
            // app.pinta_rutas(); //dibujando rutas
             
-            map.addMarker({ lat: lat, lng: lng, icon = 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'});  // agregando marcador en [lat, lng]
+            map.addMarker({ lat: lat, lng: lng, icon : 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'});  // agregando marcador en [lat, lng]
 		  
 	   
 	    map.addMarker({
