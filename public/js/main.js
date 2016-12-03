@@ -23,6 +23,7 @@ socket.on('messages', function(data) {
 	var mensaje = "";
 	var context = "";
 	var lat1, ln1;
+	console.log(data.id);
 	switch(html)
 	{
 		case 1: //por llegar
@@ -95,6 +96,11 @@ function tableCreate(data)
 {
 	 var html = data.map(function(elem, index) {
 		 var context =  "";
+		 var txt = 
+		 if(index%2 != 0)
+		 {
+			var  
+		 }
 		 switch(html)
 		{
 			case 1: //por llegar
