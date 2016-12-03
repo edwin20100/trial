@@ -135,7 +135,7 @@ function tableCreate(data)
 							    <p class="list-group-item-text">Por Llegar</p>
 							</a></li>
 							<li><a href="#" onclick="return addAction('item-${index}',4)">
-							    <h4 class="list-group-item-heading">3</h4>
+							    <h4 class="list-group-item-heading">4</h4>
 							    <p class="list-group-item-text">Terminado</p>
 							</a></li>
 						    </ul>
