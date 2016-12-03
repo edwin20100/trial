@@ -25,19 +25,19 @@ socket.on('messages', function(data) {
 	switch(html)
 	{
 		case 1: //por llegar
-			html =  "Por Salir";
+			mensaje =  "Por Salir";
 			context = "label label-warning"
 			break;
 		case 2:
-			html =  "En marcha";
+			mensaje =  "En marcha";
 			context = "label label-success"
 			break;
 		case 3:
-			html  = "Por Llegar";
+			mensaje  = "Por Llegar";
 			context = "label label-info"
 			break;
 		default:
-			html = "Detenido";
+			mensaje = "Detenido";
 			context  = "label label-danger"
 			break;
 	}
@@ -46,6 +46,7 @@ socket.on('messages', function(data) {
 	console.log(data.id);
 	console.log(elem);
 	console.log(elem.find("#statusItem").html());
+	elem.find("#statusItem).html(mensaje);
 	elem.find("#statusItem").attr("class",context);
 	var fecha = new Date()
 	var hora = fecha.getHours()
