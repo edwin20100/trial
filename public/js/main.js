@@ -46,7 +46,7 @@ socket.on('messages', function(data) {
 	console.log(data.id);
 	console.log(elem);
 	console.log(elem.find("#statusItem").html());
-	elem.find("#statusItem).html(mensaje);
+	elem.find("#statusItem").html(mensaje);
 	elem.find("#statusItem").attr("class",context);
 	var fecha = new Date()
 	var hora = fecha.getHours()
