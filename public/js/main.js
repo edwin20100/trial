@@ -23,7 +23,7 @@ socket.on('messages', function(data) {
 	var mensaje = "";
 	var context = "";
 	var lat1, ln1;
-	console.log("------>" + data.pos);
+	//console.log("------>" + data.pos);
 	switch(html)
 	{
 		case 1: //por llegar
@@ -200,7 +200,7 @@ function addAction(e,p_action,index) {
   var message = {
 	  accion : p_action,
 	  id:e,
-	  pos = index
+	  pos = index,
   //  posicionX: document.getElementById('username').value,
    // posicionY: document.getElementById('texto').value
   };
