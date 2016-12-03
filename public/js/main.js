@@ -59,7 +59,7 @@ socket.on('messages', function(data) {
 
 		
 	elem.find("#lblrestante").html("<b>"+horita+"</b>");
-	//app.inicializar();
+	app.inicializar();
 	//element.getElementById('status-item').innerHTML = html;
 	//document.getElementById('status-item').innerHTML = html;
 	//document.getElementById('status-item').className= context;
