@@ -78,10 +78,10 @@ function render (data) {
 
 function clearMarket()
 {
-	marker.setMap(null);
+	map.setMap(null);
 	//nuevo
 	
-	 map.addMarker({ lat: 13.48155375092098, lng: -88.18828582763672, icon : 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'});
+	map.addMarker({ lat: 13.48155375092098, lng: -88.18828582763672, icon : 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'});
 	map.addMarker({
 		  lat: 13.481449418865457,
 		  lng: -88.1838226318359,
