@@ -67,6 +67,17 @@ socket.on('messages', function(data) {
               click: app.enlazarMarcador,
               tap: app.enlazarMarcador
             });
+	
+	 GMaps.geolocate({
+          success: function(position){
+            
+              lat = 13.48155375092098;  // guarda coords en lat y lng
+              lng = -88.18828582763672;
+            map.addMarker({ lat: lat, lng: lng, icon : 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'});  // agregando marcador en [lat, lng]
+          },
+          error: function(error) { alert('Geolocalización falla: '+error.message); },
+          not_supported: function(){ alert("Su navegador no soporta geolocalización"); },
+        });
 	//element.getElementById('status-item').innerHTML = html;
 	//document.getElementById('status-item').innerHTML = html;
 	//document.getElementById('status-item').className= context;
