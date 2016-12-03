@@ -93,6 +93,7 @@ function tableCreateUser(data)
 				<td>
 					<h4><b>${elem.tiempoRestante} </b></h4>
 				</td>
+				<td></td>
           	 	 </tr>`);
 	}).join(" ");
 	document.getElementById('body-table-user').innerHTML = html;
