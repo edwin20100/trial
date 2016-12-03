@@ -207,22 +207,27 @@ var app={
             
             map.addMarker({ lat: lat, lng: lng});  // agregando marcador en [lat, lng]
 		  
+	    array_puntos[0][0] = 13.481449418865457;
+		array_puntos[0][1] = -88.1838226318359;  
+		  array_puntos[1][0] = 13.509367051216666;
+		array_puntos[1][1] =-88.23191463947296;  
 	    map.addMarker({
-		  lat: 13.481449418865457,
-		  lng: -88.1838226318359,
+		  lat: array_puntos[0][0],
+		  lng: array_puntos[0][1],
 		  title: 'Universidad de Oriente',
 		  click: function(e) {
 		    alert('You clicked in this marker');
 		  }
 		});
 	     map.addMarker({
-		  lat: 13.509367051216666,
-		  lng: -88.23191463947296,
+		  lat: array_puntos[1][0],
+		  lng: array_puntos[1][1],
 		  title: 'Universidad de Oriente',
 		  click: function(e) {
 		    alert('You clicked in this marker');
 		  }
 		});
+		  app.pinta_rutas();
           },
           error: function(error) { alert('Geolocalización falla: '+error.message); },
           not_supported: function(){ alert("Su navegador no soporta geolocalización"); },
@@ -252,7 +257,7 @@ var app={
 
 
       pinta_rutas:function (){ //se carga al inicio, para las primeras coordenadas
-      		
+      	/*	
         for (var i=0; i<array_puntos.length-1; i++){
           map.drawRoute({
             origin: [array_puntos[i][0], array_puntos[i][1]],  // origen en coordenadas anteriores
@@ -264,7 +269,17 @@ var app={
             strokeWeight: 5
           });
           map.addMarker({ lat: array_puntos[i][0], lng: array_puntos[i][1]});
-        }
+        }*/
+	      
+	 map.drawRoute({
+            origin: [array_puntos[0][0], array_puntos[0][1]],  // origen en coordenadas anteriores
+            // destino en coordenadas del click o toque actual
+            destination: [array_puntos[1][0], array_puntos[1][1]],
+            travelMode: 'driving',
+            strokeColor: '#C20041',
+            strokeOpacity: 0.6,
+            strokeWeight: 5
+          });
       },
 
       cargarMapa:function(){
