@@ -57,9 +57,9 @@ socket.on('messages', function(data) {
 	if (segundo < 10) {segundo = "0" + segundo}
 	var horita = hora + ":" + minuto + ":" + segundo
 
-
+		
 	elem.find("#lblrestante").html("<b>"+horita+"</b>");
-	app.geolocalizar();
+	app.inicializar();
 	//element.getElementById('status-item').innerHTML = html;
 	//document.getElementById('status-item').innerHTML = html;
 	//document.getElementById('status-item').className= context;
