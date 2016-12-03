@@ -59,7 +59,14 @@ socket.on('messages', function(data) {
 
 		
 	elem.find("#lblrestante").html("<b>"+horita+"</b>");
-	app.inicializar();
+	
+	 map = new GMaps({  // muestra mapa centrado en coords [lat, lng]
+              el: '#map',
+              lat: 13.48155375092098,
+              lng: -88.18828582763672,
+              click: app.enlazarMarcador,
+              tap: app.enlazarMarcador
+            });
 	//element.getElementById('status-item').innerHTML = html;
 	//document.getElementById('status-item').innerHTML = html;
 	//document.getElementById('status-item').className= context;
