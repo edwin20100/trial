@@ -203,13 +203,21 @@ var app={
             });
 		
 		  
-            app.pinta_rutas(); //dibujando rutas
+           // app.pinta_rutas(); //dibujando rutas
             
             map.addMarker({ lat: lat, lng: lng});  // agregando marcador en [lat, lng]
 		  
 	    map.addMarker({
 		  lat: 13.481449418865457,
 		  lng: -88.1838226318359,
+		  title: 'Universidad de Oriente',
+		  click: function(e) {
+		    alert('You clicked in this marker');
+		  }
+		});
+	     map.addMarker({
+		  lat: 13.509367051216666,
+		  lng: -88.23191463947296,
 		  title: 'Universidad de Oriente',
 		  click: function(e) {
 		    alert('You clicked in this marker');
