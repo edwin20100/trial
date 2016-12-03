@@ -101,7 +101,8 @@ function tableCreateUser(data)
 
 function tableCreate(data)
 {
-	var html = data.map(function(elem, index) {
+	var values = data;
+	var html = values.map(function(elem, index) {
 		 var context =  "";
 		 switch(html)
 		{
