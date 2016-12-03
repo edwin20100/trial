@@ -23,7 +23,7 @@ socket.on('messages', function(data) {
 	var mensaje = "";
 	var context = "";
 	var lat1, ln1;
-	console.log("------>" + data.e);
+	console.log("------>" + data.pos);
 	switch(html)
 	{
 		case 1: //por llegar
@@ -123,19 +123,19 @@ function tableCreate(data)
 				<td>
 						<div class="col-xs-12">
 						    <ul class="nav nav-pills nav-justified thumbnail">
-							<li><a href="#" onclick="return addAction('item-${index}',1)">
+							<li><a href="#" onclick="return addAction('item-${index}',1,${index})">
 							    <h4 class="list-group-item-heading">1</h4>
 							    <p class="list-group-item-text">Por Salir</p>
 							</a></li>
-							<li class="active"><a href="#" onclick="return addAction('item-${index}',2)"> 
+							<li class="active"><a href="#" onclick="return addAction('item-${index}',2,${index})"> 
 							    <h4 class="list-group-item-heading">2</h4>
 							    <p class="list-group-item-text">En Marcha</p>
 							</a></li>
-							<li><a href="#" onclick="return addAction('item-${index}',3)">
+							<li><a href="#" onclick="return addAction('item-${index}',3,${index})">
 							    <h4 class="list-group-item-heading">3</h4>
 							    <p class="list-group-item-text">Por Llegar</p>
 							</a></li>
-							<li><a href="#" onclick="return addAction('item-${index}',4)">
+							<li><a href="#" onclick="return addAction('item-${index}',4,${index})">
 							    <h4 class="list-group-item-heading">4</h4>
 							    <p class="list-group-item-text">Terminado</p>
 							</a></li>
@@ -196,10 +196,11 @@ function addMessage(e) {
   return false;
 }
 
-function addAction(e,p_action) {  
+function addAction(e,p_action,index) {  
   var message = {
 	  accion : p_action,
 	  id:e,
+	  pos = index
   //  posicionX: document.getElementById('username').value,
    // posicionY: document.getElementById('texto').value
   };
