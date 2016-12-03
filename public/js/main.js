@@ -333,8 +333,8 @@ var app={
 
             map = new GMaps({  // muestra mapa centrado en coords [lat, lng]
               el: '#map',
-              lat: lat,
-              lng: lng,
+              lat: latt,
+              lng: long,
               click: app.enlazarMarcador,
               tap: app.enlazarMarcador
             });
