@@ -23,7 +23,7 @@ socket.on('messages', function(data) {
 	var mensaje = "";
 	var context = "";
 	var lat1, ln1;
-	console.log(data.id);
+	console.log("------>" + data.e);
 	switch(html)
 	{
 		case 1: //por llegar
