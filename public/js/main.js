@@ -259,8 +259,8 @@ var app={
 		     
 		     var dato =  data;
 		     //console.log(data);
-		    tableCreate(data);
-		    tableCreateUser(data);
+		    tableCreate(dato);
+		    tableCreateUser(dato);
 	     });
 	
 	  
