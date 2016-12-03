@@ -72,7 +72,6 @@ var app={
 		"use strict";
 		var self=this;
 		self.listenSocket(); //Conectando al server con SocketIo
-        self.cargarMapa(); //llamando metodo que carga el mapa
 	}
 
 }; //cierra var app
