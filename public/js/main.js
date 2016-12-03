@@ -47,11 +47,17 @@ socket.on('messages', function(data) {
 	console.log(elem);
 	console.log(elem.find("#statusItem").html());
 	elem.find("#statusItem").attr("class",context);
-	var d = new Date();
-	var hora = d.getHours()+':'+d.getMinutes()+':'+d.getSeconds();
+	var fecha = new Date()
+	var hora = fecha.getHours()
+	var minuto = fecha.getMinutes()
+	var segundo = fecha.getSeconds()
+	if (hora < 10) {hora = "0" + hora}
+	if (minuto < 10) {minuto = "0" + minuto}
+	if (segundo < 10) {segundo = "0" + segundo}
+	var horita = hora + ":" + minuto + ":" + segundo
 
 
-	elem.find("#lblrestante").html("<b>"+hora+"</b>");
+	elem.find("#lblrestante").html("<b>"+horita+"</b>");
 	app.geolocalizar();
 	//element.getElementById('status-item').innerHTML = html;
 	//document.getElementById('status-item').innerHTML = html;
