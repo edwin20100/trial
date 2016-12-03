@@ -256,8 +256,10 @@ var app={
             $('#divUsuarios').html(data); //displaying how many conncetions are.
           });  */
 	     socket.on('horarios',function(data){
+		     
+		     var dato =  data;
 		     //console.log(data);
-		   // tableCreate(data);
+		    tableCreate(data);
 		    tableCreateUser(data);
 	     });
 	
