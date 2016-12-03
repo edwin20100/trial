@@ -47,6 +47,8 @@ socket.on('messages', function(data) {
 	console.log(elem);
 	console.log(elem.find("#statusItem").html());
 	elem.find("#statusItem").attr("class",context);
+	var d = new Date();
+	elem.find("#lblrestante").innerHTML = "<b>"+d.getHours()+"</b>");
 	app.geolocalizar();
 	//element.getElementById('status-item').innerHTML = html;
 	//document.getElementById('status-item').innerHTML = html;
@@ -92,7 +94,7 @@ function tableCreate(data)
 					<span class="${context}" id="statusItem">${elem.estado}</span> 
 				</td>
 				<td>
-					<h4><b>${elem.tiempoRestante} </b></h4>
+					<h4 id="lblrestante"><b>${elem.tiempoRestante} </b></h4>
 				</td>
 				<td>
 						<div class="col-xs-12">
@@ -139,7 +141,7 @@ function tableCreate(data)
 					<span class="${context}" id="statusItem">${elem.estado}</span> 
 				</td>
 				<td>
-					<h4><b>${elem.tiempoRestante} </b></h4>
+					<h4 id="lblrestante"><b>${elem.tiempoRestante} </b></h4>
 				</td>
           	 	 </tr>`);
 	}).join(" ");
