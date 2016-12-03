@@ -114,7 +114,10 @@ function tableCreate(data)
 				<td>
           	 	 </tr>`);
 	}).join(" ");
-	document.getElementById('body-table-admin').innerHTML = html;
+	
+	var admintable =document.getElementById('body-table-admin');
+	console.log(admintable);
+	admintable.innerHTML= html;
 }
 
 function addMessage(e) {  
