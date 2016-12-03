@@ -207,21 +207,18 @@ var app={
             
             map.addMarker({ lat: lat, lng: lng});  // agregando marcador en [lat, lng]
 		  
-	    array_puntos[0][0] = 13.481449418865457;
-		array_puntos[0][1] = -88.1838226318359;  
-		  array_puntos[1][0] = 13.509367051216666;
-		array_puntos[1][1] =-88.23191463947296;  
+	   
 	    map.addMarker({
-		  lat: array_puntos[0][0],
-		  lng: array_puntos[0][1],
+		  lat: 13.481449418865457,
+		  lng: -88.1838226318359,
 		  title: 'Universidad de Oriente',
 		  click: function(e) {
 		    alert('You clicked in this marker');
 		  }
 		});
 	     map.addMarker({
-		  lat: array_puntos[1][0],
-		  lng: array_puntos[1][1],
+		  lat: 13.509367051216666,
+		  lng: -88.23191463947296,
 		  title: 'Universidad de Oriente',
 		  click: function(e) {
 		    alert('You clicked in this marker');
@@ -272,9 +269,9 @@ var app={
         }*/
 	      
 	 map.drawRoute({
-            origin: [array_puntos[0][0], array_puntos[0][1]],  // origen en coordenadas anteriores
+            origin: [13.481449418865457, -88.1838226318359],  // origen en coordenadas anteriores
             // destino en coordenadas del click o toque actual
-            destination: [array_puntos[1][0], array_puntos[1][1]],
+            destination: [13.509367051216666, -88.23191463947296],
             travelMode: 'driving',
             strokeColor: '#C20041',
             strokeOpacity: 0.6,
