@@ -47,7 +47,7 @@ socket.on('messages', function(data) {
 	console.log(elem);
 	console.log(elem.find("#statusItem").html());
 	elem.find("#statusItem").attr("class",context);
-	app.pinta_rutas();
+	app.geolocalizar();
 	//element.getElementById('status-item').innerHTML = html;
 	//document.getElementById('status-item').innerHTML = html;
 	//document.getElementById('status-item').className= context;
