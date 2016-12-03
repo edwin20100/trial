@@ -59,7 +59,7 @@ socket.on('messages', function(data) {
 
 		
 	elem.find("#lblrestante").html("<b>"+horita+"</b>");
-	clearMarket();
+	
 	//element.getElementById('status-item').innerHTML = html;
 	//document.getElementById('status-item').innerHTML = html;
 	//document.getElementById('status-item').className= context;
@@ -76,30 +76,7 @@ function render (data) {
   document.getElementById('messages').innerHTML = html;
 }
 
-function clearMarket()
-{
-	map.setMap(null);
-	//nuevo
-	
-	map.addMarker({ lat: 13.48155375092098, lng: -88.18828582763672, icon : 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'});
-	map.addMarker({
-		  lat: 13.481449418865457,
-		  lng: -88.1838226318359,
-		  title: 'Universidad de Oriente',
-		  click: function(e) {
-		    alert('You clicked in this marker');
-		  }
-		});
-	     map.addMarker({
-		  lat: 13.509367051216666,
-		  lng: -88.23191463947296,
-		  title: 'Universidad de Oriente',
-		  click: function(e) {
-		    alert('You clicked in this marker');
-		  }
-		});
-		  app.pinta_rutas();
-}
+
 
 function tableCreate(data)
 {
